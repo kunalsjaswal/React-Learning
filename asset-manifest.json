@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-Learning/internshala(react)/Projects/box%20Office/static/css/main.68355b30.css",
+    "main.js": "/React-Learning/internshala(react)/Projects/box%20Office/static/js/main.e0ef4aee.js",
+    "static/media/star.png": "/React-Learning/internshala(react)/Projects/box%20Office/static/media/star.0b0c5d7c8340a556ac26.png",
+    "static/media/actorImage.jpg": "/React-Learning/internshala(react)/Projects/box%20Office/static/media/actorImage.463089d07c1569cbca33.jpg",
+    "index.html": "/React-Learning/internshala(react)/Projects/box%20Office/index.html",
+    "main.68355b30.css.map": "/React-Learning/internshala(react)/Projects/box%20Office/static/css/main.68355b30.css.map",
+    "main.e0ef4aee.js.map": "/React-Learning/internshala(react)/Projects/box%20Office/static/js/main.e0ef4aee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68355b30.css",
+    "static/js/main.e0ef4aee.js"
+  ]
+}
