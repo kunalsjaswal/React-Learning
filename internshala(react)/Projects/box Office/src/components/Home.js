@@ -26,14 +26,12 @@ const Home = ({ apiKey }) => {
     }
 
 
-
-
    const onSearch = async () => {
     const result=await apiGet(`/search/${searchOptions}?q=${input}`);  //returning parsedData
     setResults(result);
-    console.log(result);
   };
 
+  // using enter to search in textfiled  'enter keycode=13'
   const onKeyDown = (ev) => {
     if (ev.keyCode === 13) {
       onSearch();
@@ -54,6 +52,8 @@ const Home = ({ apiKey }) => {
 
   return (
     <MainPageLayout>
+      {/* children of mainpagelayout  */}
+
     <InputStyle>
       <input
         placeholder="Search for Something"

@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{memo} from 'react'
 import Navbar from './Navbar'
 
 const MainPageLayout = ({children}) => {
+  console.log("mainpage")
   return (
     <>
     <Navbar/> 
@@ -10,4 +11,4 @@ const MainPageLayout = ({children}) => {
   )
 }
 
-export default MainPageLayout
+export default memo(MainPageLayout)

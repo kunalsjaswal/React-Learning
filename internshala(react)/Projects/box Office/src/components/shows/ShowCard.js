@@ -18,13 +18,13 @@ const ShowCard = ({ id, name, image, summary ,onStarClick,isStarred}) => {
         <img src={image} alt="show image" />
       </div>
 
-      <h1 className="show-h1"> {name} </h1>{" "}
+      <h1 className="show-h1"> {name} </h1>
       <p className="show-summary"> {summaryAsText} </p>
 
       <div>
-        <Link className="show-link" to={`/show/${id}`}> Read more </Link>{" "}
-        <ShowBtn className="show-btn" type="button" onClick={onStarClick} isStarred={isStarred}> {isStarred?"Remove":"Add me"} </ShowBtn>{" "}
-      </div>{" "}
+        <Link className="show-link" to={`/show/${id}`}> Read more </Link>
+        <ShowBtn className="show-btn" type="button" onClick={onStarClick} isStarred={isStarred}> {isStarred?"Remove":"Add me"} </ShowBtn>
+      </div>
     </MainDiv>
 
   );

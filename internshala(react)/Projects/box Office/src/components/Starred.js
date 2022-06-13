@@ -3,7 +3,6 @@ import { useShows } from "../misc/CustomHooks";
 import apiGet from "./ApiConfig";
 import MainPageLayout from "./MainPageLayout";
 import ShowGrid from "./shows/ShowGrid";
-import { GridStyle } from "./shows/showStyled";
 
 const Starred = () => {
   const [starred] = useShows();
@@ -36,7 +35,7 @@ const Starred = () => {
       {error && <div>Error Occured: {error}</div>}
       {!isLoading && !shows && <div>No shows were added</div>}
       {!isLoading && !error && shows && <ShowGrid data={shows}></ShowGrid>}
-      </MainPageLayout>
+    </MainPageLayout>
   );
 };
 
