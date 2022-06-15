@@ -1,11 +1,29 @@
 import React from "react";
+import { Route, Switch} from "react-router-dom";
 import 'rsuite/dist/rsuite.min.css';
+import PrivateRoute from "./components/PrivateRoute";
+import PublicRoute from "./components/PublicRoute";
+import { ProfileProvider } from "./context/profile.context";
+import Home from "./pages/Home";
+import SignIn from "./pages/SignIn";
 
 function App() {
   return (
-    <div className="container">
-      Chat-app
-    </div>
+    <ProfileProvider>
+    <Switch>
+
+          {/* Signin Route  */}
+          <PublicRoute path="/signin">
+            <SignIn/>
+          </PublicRoute>
+
+          {/* private router for home  */}
+          <PrivateRoute>
+            <Home/>
+          </PrivateRoute>
+          
+    </Switch>
+    </ProfileProvider>
   );
 }
 
