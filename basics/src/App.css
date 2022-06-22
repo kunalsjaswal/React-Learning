@@ -16,3 +16,27 @@ button {
     padding: 1% 5%;
     margin-left: 44%;
 }
+
+ul {
+    font-size: 1.2vw;
+}
+
+h2 {
+    margin-left: 4%;
+}
+
+li {
+    margin-left: 5%;
+}
+
+div.content {
+    text-align: center;
+    font-size: 3vw;
+    margin-top: 2%;
+    font-weight: bold;
+}
+
+div.status {
+    font-size: 1vw;
+    font-weight: normal;
+}
