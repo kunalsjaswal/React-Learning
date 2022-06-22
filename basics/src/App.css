@@ -74,3 +74,19 @@ form select {
     padding: 0.5%;
     margin-top: 2%;
 }
+
+div.counter {
+    background-color: rgb(226, 226, 226);
+    width: 50%;
+    padding: 2%;
+    text-align: center;
+    font-size: 2vw;
+    margin: auto;
+    margin-top: 2%;
+}
+
+div.counter button {
+    padding: 0.5%;
+    margin: 0;
+    margin-right: 1%;
+}

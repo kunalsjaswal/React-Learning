@@ -5,6 +5,7 @@ import Form from './components/Form';
 import ListRender from './components/ListRender';
 import Parent from './components/Parent';
 import Sample1 from './components/Sample1';
+import UseState from './react hooks/UseState';
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
     {/* <Parent parent="mummy papa"/> */}
     {/* <ConditionalRender navTitle="Conditional Rendering"/> */}
     {/* <ListRender navTitle="List Rendering (mapping)"/> */}
+    {/* <Form navTitle="Form Component"/> */}
 
-    <Form navTitle="Form Component"/>
+    <UseState navTitle="useState hook"/>
 
 
     </div>
