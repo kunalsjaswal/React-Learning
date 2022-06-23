@@ -67,7 +67,7 @@ const UseState = ({navTitle}) => {
           <button onClick={itemsHandle}>Generate Random</button>
 
         <h2>Random Numbers</h2>
-        <ul style={{color:"black",listStyleType:'none'}}>
+        <ul style={{color:"black",listStyleType:'none',display:"flex"}}>
           {
             items.map(item=>
             <li key={item.id}>{item.value}</li>)
