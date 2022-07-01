@@ -1,0 +1,1 @@
+useReducer helps to manage states.

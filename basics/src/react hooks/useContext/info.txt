@@ -1,0 +1,2 @@
+usecontext deals with props. like we dont have to set props to child component. instead we intialize it and use it 
+in any of our child components
