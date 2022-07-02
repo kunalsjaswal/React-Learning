@@ -41,12 +41,12 @@ const DatafetchingUseReducer = () => {
     },[])
 
   return (
-    <div>
+    <>
         <nav>Data fetching using useReducer</nav>
 
         {state.loading ? 'Loading': state.post.title}
         {state.error? state.error:null}
-    </div>
+    </>
   )
 }
 

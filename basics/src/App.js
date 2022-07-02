@@ -21,6 +21,26 @@ import ComponentB from './react hooks/useReducerANDuseContext/ComponentB';
 import ComponentC from './react hooks/useReducerANDuseContext/ComponentC';
 import DataFetchingUseState from './dataFetch/DataFetchingUseState';
 import DatafetchingUseReducer from './dataFetch/DatafetchingUseReducer';
+import ParentMemo from './react hooks/Memo';
+import UseRefHook from './react hooks/UseRefHook';
+import UseRefTimer from './react hooks/UseRefTimer';
+import DocTitle1 from './customHook/DocTitle1';
+import DocTitle2 from './customHook/DocTitle2';
+import Counter1 from './customHook/Counter1';
+import Counter2 from './customHook/Counter2';
+import UserForm from './customHook/UserForm';
+import { Route,Routes } from 'react-router-dom';
+import HomeRouter from './reactRouter/HomeRouter';
+import AboutRouter from './reactRouter/AboutRouter';
+import NavbarRouter from './reactRouter/NavbarRouter';
+import OrderSummary from './reactRouter/OrderSummary';
+import Nomatch from './reactRouter/Nomatch';
+import Products from './reactRouter/Products';
+import FeaturedProducts from './reactRouter/FeaturedProducts';
+import NewProducts from './reactRouter/NewProducts';
+import Users from './reactRouter/Users';
+import UserDetails from './reactRouter/UserDetails';
+import Admin from './reactRouter/Admin';
 
 export const UserContext= React.createContext()
 export const CourseContext=React.createContext()
@@ -90,7 +110,41 @@ function App() {
  </CountContext.Provider> */}
 
  {/* <DataFetchingUseState/> */}
- <DatafetchingUseReducer/>
+ {/* <DatafetchingUseReducer/> */}
+
+{/* <ParentMemo/> */}
+{/* <UseRefHook/> */}
+{/* <UseRefTimer/> */}
+{/* <DocTitle1/> */}
+{/* <DocTitle2/> */}
+
+{/* <Counter1/>
+<Counter2/> */}
+
+{/* <UserForm/> */}
+
+{/* routing  */}
+<NavbarRouter/>
+
+<Routes>
+  <Route path='/' element={<HomeRouter/>}></Route>
+  <Route path='/about' element={<AboutRouter/>}></Route>
+  <Route path='order-summary' element={<OrderSummary/>}></Route>
+  <Route path='products' element={<Products/>}>
+    {/* nested routes  */}
+    {/* index = parent path i.e on products it will show featured */}
+    <Route index element={<FeaturedProducts/>}/>
+    <Route path='featured' element={<FeaturedProducts/>}/>
+    <Route path='new' element={<NewProducts/>}/>
+  </Route>
+  <Route path='users' element={<Users/>} />
+
+  {/* dynamic route  */}
+  <Route path='users/:userId' element={<UserDetails/>}/>
+  <Route path='users/admin' element={<Admin/>}/>
+
+  <Route path='*' element={<Nomatch/>}></Route>
+</Routes>
 
 
     </div>
