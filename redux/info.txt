@@ -1,0 +1,9 @@
+1. redux is library for javascript(react, vue,angular)
+2. it is a state container for javascript apps
+3. redux is predictable 
+
+  Redux  |  Purpose (3 core concept in redux)
+1.Store  - Holds the state of your applicationa
+2.Action - Describes what  happened
+3.reducer- Ties the store and actions together
+

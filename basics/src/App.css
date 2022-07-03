@@ -1,9 +1,11 @@
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: black;
-    color: white;
+    /* background-color: black; */
+    /* color: white; */
 }
 
+
+/* 
 nav {
     font-size: 2vw;
     text-align: center;
@@ -51,10 +53,9 @@ div.content {
 div.status {
     font-size: 1vw;
     font-weight: normal;
-}
+} 
 
 form {
-    /* text-align: center; */
     padding: 2%;
     margin: 2% 20%;
     background-color: rgb(187, 187, 187);
@@ -114,3 +115,4 @@ a.active {
     text-decoration: underline;
     opacity: 1;
 }
+*/
