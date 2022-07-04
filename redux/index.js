@@ -7,6 +7,12 @@ const bindActionCreators = redux.bindActionCreators
 // combining reducers
 const combineReducers = redux.combineReducers
 
+//redux- logger as middleware 
+const reduxLogger = require('redux-logger')
+const logger = reduxLogger.createLogger()
+const applyMiddleware = redux.applyMiddleware
+
+
 // action type
 const CAKE_ORDERED = "CAKE_ORDERED";
 const CAKE_RETURNED = "CAKE_RETURNED";
@@ -126,9 +132,9 @@ const rootReducer = combineReducers({
     iceCream: iceCreamReducer
 })
 
-const store = createStore(rootReducer) //created our store
+const store = createStore(rootReducer, applyMiddleware(logger)) //created our store
 console.log('inital state: ', store.getState())
-const unSubscribe = store.subscribe(() => console.log('updated state', store.getState()))
+const unSubscribe = store.subscribe(() => {})
     // if any changes to store happens subscribe method get called
 
 
