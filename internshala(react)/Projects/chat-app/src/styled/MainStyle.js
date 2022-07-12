@@ -13,3 +13,20 @@ export const ImageAdjust=styled.div`
     font-size:3vw;
 }
 `
+
+
+export const ChatRoomStyle=styled.div`
+.custom-scroll {
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: #ddd;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: darken(#ddd, 20%);
+    }
+  }
+`
