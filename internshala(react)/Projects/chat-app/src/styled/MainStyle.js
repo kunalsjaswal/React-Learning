@@ -30,3 +30,32 @@ export const ChatRoomStyle=styled.div`
     }
   }
 `
+
+export const ChatWindowDiv=styled.div`
+
+.chat-top,
+.chat-middle,
+.chat-bottom {
+  margin: 0;
+  padding: 0;
+}
+
+.chat-top,
+.chat-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.chat-top {
+  height: $chat-t;
+}
+
+.chat-bottom {
+  height: $chat-b;
+}
+
+.chat-middle {
+  height: calc(100% - #{$chat-t} - #{$chat-b});
+}
+
+`
