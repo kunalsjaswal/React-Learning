@@ -4,10 +4,10 @@ import AvatarEditor from 'react-avatar-editor';
 
 import { useModalState } from '../../misc/customHooks';
 import { useProfile } from '../../context/profile.context';
-// import ProfileAvatar from '../ProfileAvatar';
-// import { getUserUpdates } from '../../misc/helpers';
-// import { getNameInitials } from '../../misc/helpers';
 import { storage,database } from '../../misc/firebase';
+import ProfileAvatar from '../profileAvatar';
+import { ImageAdjust } from '../../styled/MainStyle';
+
 
 const fileInputTypes = '.png, .jpeg, .jpg';
 
@@ -82,6 +82,9 @@ const AvatarUpload = () => {
 
     return (
         <div className="mt-3 text-center">
+          <ImageAdjust>
+          <ProfileAvatar src={profile.avatar} name={profile.name}></ProfileAvatar>
+          </ImageAdjust>
             <div>
                <label htmlFor="avatar-upload" className="d-block cursor-pointer padded">
                  Select new Avatar
