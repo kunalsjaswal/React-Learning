@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch} from "react-router-dom";
-import 'rsuite/dist/rsuite.min.css';
+import 'rsuite/dist/styles/rsuite-default.css';
 import PrivateRoute from "./components/PrivateRoute";
 import PublicRoute from "./components/PublicRoute";
 import { ProfileProvider } from "./context/profile.context";
