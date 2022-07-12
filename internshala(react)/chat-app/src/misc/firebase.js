@@ -1,8 +1,9 @@
-import firebase from 'firebase/app'
-import 'firebase/auth'
-import 'firebase/database'
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
+import 'firebase/storage';
 
-const Config = {
+const config={
     apiKey: "AIzaSyACedkDKpVT5ZadgVABDDYzvAyLFM9pq4c",
     authDomain: "chat-web-app-1ad7b.firebaseapp.com",
     databaseURL: "https://chat-web-app-1ad7b-default-rtdb.firebaseio.com",
@@ -11,8 +12,9 @@ const Config = {
     messagingSenderId: "181519901842",
     appId: "1:181519901842:web:2f7dd66245d45c81cdb24b"
   };
-  
-  // Initialize Firebase
-  const app = firebase.initializeApp(Config);
-  export const auth=app.auth();
-  export const database=app.database()
+
+
+const app=  firebase.initializeApp(config);
+export const auth=app.auth();
+export const database=app.database();
+export const storage=app.storage();
