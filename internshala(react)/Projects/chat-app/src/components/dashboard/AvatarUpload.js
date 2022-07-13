@@ -7,6 +7,7 @@ import { useProfile } from '../../context/profile.context';
 import { storage,database } from '../../misc/firebase';
 import ProfileAvatar from '../profileAvatar';
 import { ImageAdjust } from '../../styled/MainStyle';
+import { getUserUpdates } from '../../misc/helpers';
 
 
 const fileInputTypes = '.png, .jpeg, .jpg';
@@ -67,9 +68,12 @@ const AvatarUpload = () => {
 
         const downloadUrl = await uploadAvatarResult.ref.getDownloadURL()
 
-        const userAvatarRef = database.ref(`/profile/${profile.uid}`).child('avatar');
+        const updates=await getUserUpdates(profile.uid,'avatar',downloadUrl,database)
+        await database.ref().update(updates)
 
-        userAvatarRef.set(downloadUrl);
+        // const userAvatarRef = database.ref(`/profile/${profile.uid}`).child('avatar');
+
+        // userAvatarRef.set(downloadUrl);
 
         setIsLoading(false);
 
