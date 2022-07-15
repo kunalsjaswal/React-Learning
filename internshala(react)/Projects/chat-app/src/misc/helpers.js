@@ -34,3 +34,7 @@ export const getUserUpdates=async(userId,keyToUpdate,value,db)=>{
     return updates;
 
 }
+
+export function transforToArrray(snapVal){
+    return snapVal ? Object.keys(snapVal) : [];
+}
