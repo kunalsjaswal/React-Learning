@@ -6,13 +6,15 @@ import ProfileAvatar from "../../profileAvatar";
 import ProfileInfoBtnModal from "./ProfileInfoBtnModal";
 import {useCurrentRoom} from '../../../context/current-room-context'
 import { auth } from "../../../misc/firebase";
-import { useHover } from "../../../misc/customHooks";
+import { useHover, useMediaQuery } from "../../../misc/customHooks";
+import IconBtnControl from "./IconBtnControl";
 
-const MessageItem = ({message,handleAdmin}) => {
+const MessageItem = ({message,handleAdmin,handleLike}) => {
   
-    const {author,createdAt,text}=message;
+    const {author,createdAt,text,likes,likeCount}=message;
 
     const [selfRef,isHover]=useHover();
+    const isMobile=useMediaQuery('(max-width:992px');
 
     const isAdmin=useCurrentRoom(v=>v.isAdmin);
     const admins=useCurrentRoom(v=>v.admins);
@@ -20,6 +22,10 @@ const MessageItem = ({message,handleAdmin}) => {
     const isMsgAuthorAdmin=admins.includes(author.uid);
     const isAuthor=auth.currentUser.uid===author.uid;
     const canGrantAdmin=isAdmin && !isAuthor;
+
+    const canShowIcons=isMobile || isHover;
+    const isLiked=likes && Object.keys(likes).includes(auth.currentUser.uid);
+
     
 
     
@@ -34,7 +40,7 @@ const MessageItem = ({message,handleAdmin}) => {
         <ProfileInfoBtnModal
         profile={author}
         appearance="link"
-        classNameName="p-0 ml-1 text-black"
+        className="p-0 ml-1 text-black"
         >
           {canGrantAdmin && 
           <Button block onClick={()=>handleAdmin(author.uid)} color="blue">
@@ -47,6 +53,15 @@ const MessageItem = ({message,handleAdmin}) => {
           className="font-normal text-black-45 ml-2"
         />
 
+        <IconBtnControl
+        {...(isLiked? {color:'red'}:{})}
+         isVisible={canShowIcons}
+         iconName="heart"
+         tooltip='like this message'
+         onClick={()=>handleLike(message.id)}
+         badgeContent={likeCount}
+
+        />
     </div>
 
     <div>
